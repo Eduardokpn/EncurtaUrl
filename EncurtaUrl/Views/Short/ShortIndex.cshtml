@@ -1,0 +1,24 @@
+﻿@model EncurtaUrl.Models.ShortClass
+
+<head>
+    <link href="./css/site.css" rel="stylesheet" />
+</head>
+<section style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; text-align: center; margin-top: 8%;">
+
+    <form asp-controller="Short" asp-action="ShortUrl" method="post" style="display: flex; flex-direction: column; align-items: center; width: 100%; max-width: 1000px; margin-top: -25%;  " >
+
+        <h1 style="margin-bottom: 5%;">Encurte seus links de maneira facil e rapida!</h1>
+
+        <div class="input-group mb-3" style="width: 120%; height: 50px;">
+            <span class="input-group-text" id="basic-addon3" style="font-size: 30px; color: white; background-color: #F28A2E; width:100px; margin-left: 5px;"><span style="margin-left: 15px;"> Url </span></span>
+            <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3" name="Url" value="@Model.Url" required>
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="margin-top: 15px; width: 40%; height: 70px; font-size: 35px; background-color: #F28A2E">ENCURTAR</button>
+
+    </form>
+
+    <h2 style="margin-top: 30px;"> <span>http://localhost:5191/</span>@Model?.ShortUrl </h2>
+
+</section>
+
